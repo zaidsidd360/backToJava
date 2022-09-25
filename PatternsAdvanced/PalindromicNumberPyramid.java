@@ -6,7 +6,7 @@ public class PalindromicNumberPyramid {
         for (int i = 1; i <= n; i++) {
             // Spaces
             for (int s = 1; s <= n - i; s++) {
-                System.out.print("-");
+                System.out.print(" ");
             }
 
             // First half
@@ -24,8 +24,8 @@ public class PalindromicNumberPyramid {
 }
 
 // OUTPUT
-// ----1
-// ---212
-// --32123
-// -4321234
+//     1
+//    212
+//   32123
+//  4321234
 // 543212345
