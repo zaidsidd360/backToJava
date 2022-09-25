@@ -11,7 +11,7 @@ public class Butterfly {
             }
             // Spaces
             for (int s = 1; s <= (2 * n) - (2 * i); s++) {
-                System.out.print("-"); // Use " " to clearly visualize pattern.
+                System.out.print(" "); 
             }
             // Right half
             for (int k = 1; k <= i; k++) {
@@ -27,7 +27,7 @@ public class Butterfly {
             }
             // Spaces
             for (int s = 1; s <= (i - 1) * 2; s++) {
-                System.out.print("-"); // Use " " to clearly visualize pattern.
+                System.out.print(" "); 
             }
             // Right half
             for (int k = 1; k <= n + 1 - i; k++) {
@@ -40,10 +40,10 @@ public class Butterfly {
 
 // OUTPUT
 // *      *
-// **----**
-// ***--***
+// **    **
+// ***  ***
 // ********
 // ********
-// ***--***
-// **----**
-// *------*
+// ***  ***
+// **    **
+// *      *
