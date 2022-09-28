@@ -17,7 +17,7 @@ class LargestNum {
             if (arr[i] > largestNum)
                 largestNum = arr[i];
         }
-        System.out.println("The largest number you entered was: " + largestNum);
+        System.out.println("The largest number entered was: " + largestNum);
 
     }
 }
