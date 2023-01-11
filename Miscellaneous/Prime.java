@@ -1,7 +1,6 @@
 package Miscellaneous;
 
 public class Prime {
-
     public static void checkPrime(int num) {
         int factors = 0;
 
