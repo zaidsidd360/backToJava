@@ -10,9 +10,8 @@ public class PrimeRecursive {
             return;
         }
 
-        if (n % i == 0) {
+        if (n % i == 0) 
             fac += 1;
-        }
         checkPrimeRecursive(n, i + 1, fac);
     }
 
