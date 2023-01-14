@@ -1,4 +1,4 @@
-package Miscellaneous;
+package LeetCodeCOntest;
 
 public class GCD {
     public static int[] bubbleSort(int arr[]) {
