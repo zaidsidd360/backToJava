@@ -38,7 +38,7 @@ public class Calculator {
                 Double div = num1 / num2;
                 System.out.println("The division is: " + div);
                 break;
-            case 5:
+            default:
                 System.out.println("Invalid choice!");
         }
 

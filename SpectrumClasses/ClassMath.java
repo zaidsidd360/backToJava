@@ -29,7 +29,7 @@ public class ClassMath {
         int sum = m.sum(2, 3);
         int diff = m.diff(2, 3);
         int prod = m.prod(2, 3);
-        double quo = m.quo(2, 3);
+        double quo = m.quo(7, 3);
         System.out.println("Sum: " + sum + ", " + "diff: " + diff + ", " + "prod: " + prod + ", " + "quo: " + quo);
     }
 }
