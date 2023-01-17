@@ -15,7 +15,7 @@ public class GCD {
     }
 
     public static int findGCD(int a, int b) {
-        int gcd = 0;
+        int gcd = 1;
         for (int i = 1; i <= b; i++) {
             if (a % i == 0 && b % i == 0) {
                 if (i > gcd)
@@ -26,10 +26,10 @@ public class GCD {
     }
 
     public static void main(String[] args) {
-        int arr[] = { 5, 4, 3, 6, 6, 7, 8 };
+        int arr[] = { 59, 41, 32, 68, 67, 72, 24 };
         int sortedArray[] = bubbleSort(arr);
         int largest = sortedArray[sortedArray.length - 1];
         int smallest = sortedArray[0];
-        System.out.println(findGCD(smallest, largest));
+        System.out.println("GCD of " + smallest + " and " + largest + " is: " + findGCD(smallest, largest));
     }
 }
