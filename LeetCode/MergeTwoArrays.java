@@ -1,4 +1,4 @@
-package LeetCodeCOntest;
+package LeetCode;
 
 public class MergeTwoArrays {
     public static int[] mergeTwoArrays(int array1[], int array2[]) {

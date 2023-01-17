@@ -1,4 +1,4 @@
-package LeetCodeCOntest;
+package Miscellaneous;
 
 import java.lang.Math;
 
