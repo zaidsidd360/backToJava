@@ -2,6 +2,8 @@
 
 git add .
 
+git status
+
 echo "Enter commit message: "
 read commitmsg
 
