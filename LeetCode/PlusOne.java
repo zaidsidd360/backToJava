@@ -12,6 +12,8 @@ public class PlusOne {
             multiplyBy = multiplyBy / 10;
         }
         num++;
+        // Modification: Use temporary value for num and take each digit and add to
+        // array.
         String numString = Integer.toString(num);
         int digitsPlusOne[] = new int[numString.length()];
         for (int i = 0; i < numString.length(); i++) {
