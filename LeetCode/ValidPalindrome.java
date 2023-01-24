@@ -14,12 +14,10 @@ public class ValidPalindrome {
                 newStr += Character.toString(s.charAt(i)).toLowerCase();
             }
         }
-        System.out.println(newStr);
         String revStr = "";
         for (int i = newStr.length() - 1; i >= 0; i--) {
             revStr += Character.toString(newStr.charAt(i));
         }
-        System.out.println(revStr);
         return newStr.equals(revStr) ? true : false;
     }
 
