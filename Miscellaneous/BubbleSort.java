@@ -1,9 +1,7 @@
 package Miscellaneous;
 
-import java.util.Scanner;
-
 public class BubbleSort {
-    public static void bubbleSort(int arr[]) {
+    public static int[] bubbleSort(int arr[]) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
                 if (arr[j] < arr[i]) {
@@ -13,18 +11,14 @@ public class BubbleSort {
                 }
             }
         }
-        for (int k = 0; k < arr.length; k++) {
-            System.out.print(arr[k]);
-        }
+        return arr;
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int array[] = new int[5];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = sc.nextInt();
+        int arr[] = { 11, 3, 33, 2, 4 };
+        int sortedArray[] = bubbleSort(arr);
+        for (int e : sortedArray) {
+            System.out.println(e + " ");
         }
-        bubbleSort(array);
-
     }
 }
