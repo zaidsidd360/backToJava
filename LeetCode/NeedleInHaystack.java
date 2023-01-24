@@ -19,5 +19,5 @@ public class NeedleInHaystack {
 
     public static void main(String[] args) {
         System.out.println(fineNeedleInHaystack("issi", "mississippi"));
-    }
+    } // INCOMPLETE
 }
