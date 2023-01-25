@@ -14,7 +14,7 @@ public class ThreeNplusOne {
     }
 
     public static void main(String[] args) {
-        int iterations = calcIterations(97);
+        int iterations = calcIterations(27);
         System.out.println(iterations);
     }
 }

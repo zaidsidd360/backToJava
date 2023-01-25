@@ -3,9 +3,6 @@ package SpectrumClasses;
 public class AvgSalary {
     public static double calculateAvgSalary(double salaries[]) {
         double sumOfSalaries = 0;
-        // for (int i = 0; i < salaries.length; i++) {
-        // sumOfSalaries += salaries[i];
-        // }
         for (double salary : salaries) {
             sumOfSalaries += salary;
         }
