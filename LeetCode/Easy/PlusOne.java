@@ -1,6 +1,6 @@
-package LeetCode;
+package LeetCode.Easy;
 
-public class PlusOne {
+public class PlusOne { // UNSOLVED YET
     public static int[] plusOne(int[] digits) {
         int digitsLenght = digits.length;
         int multiplyBy = (int) Math.pow(10, digitsLenght - 1);

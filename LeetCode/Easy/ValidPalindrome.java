@@ -1,10 +1,11 @@
 // A phrase is a palindrome if, after converting all uppercase letters into lowercase letters 
-// and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+// and removing all non-alphanumeric characters, it reads the same forward and backward. 
+// Alphanumeric characters include letters and numbers.
 // Given a string s, return true if it is a palindrome, or false otherwise.
 
-package LeetCode;
+package LeetCode.Easy;
 
-public class ValidPalindrome {
+public class ValidPalindrome { // 125
     public static boolean checkPalindrome(String s) { // Naive implementation; LC runtime 1517ms
         if (s.length() == 0)
             return false;

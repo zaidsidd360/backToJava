@@ -1,9 +1,11 @@
-// Given an integer array nums, return the greatest common divisor of the smallest number and largest number in nums.
-// The greatest common divisor of two numbers is the largest positive integer that evenly divides both numbers.
+// Given an integer array nums, return the greatest common
+// divisor of the smallest number and largest number in nums.
+// The greatest common divisor of two numbers is the largest 
+// positive integer that evenly divides both numbers.
 
-package LeetCode;
+package LeetCode.Easy;
 
-public class GCD {
+public class GCD { // 1979
     public static int[] bubbleSort(int arr[]) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {

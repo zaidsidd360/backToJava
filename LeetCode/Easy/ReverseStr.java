@@ -1,9 +1,9 @@
 // Write a function that reverses a string. The input string is given as an array of characters s.
 // You must do this by modifying the input array in-place with O(1) extra memory.
 
-package LeetCode;
+package LeetCode.Easy;
 
-public class ReverseStr {
+public class ReverseStr { // 344
     public static String[] revStr(String s[]) { // Naive implementation; LC runtime: 677ms
         String str = "";
         for (int i = s.length - 1; i >= 0; i--) {

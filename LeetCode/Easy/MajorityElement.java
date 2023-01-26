@@ -2,11 +2,11 @@
 // The majority element is the element that appears more than ⌊n / 2⌋ times. 
 // You may assume that the majority element always exists in the array.
 
-package LeetCode;
+package LeetCode.Easy;
 
 import java.util.HashMap;
 
-public class MajorityElement {
+public class MajorityElement { // 169
     public static int findMajorityElement(int nums[]) {
         HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {

@@ -4,9 +4,9 @@
 // Given an integer target, return true if target is in matrix or false otherwise.
 // You must write a solution in O(log(m * n)) time complexity.
 
-package LeetCode;
+package LeetCode.Medium;
 
-public class SearchMatrix {
+public class SearchMatrix { // 74
     public static boolean searchMatrix(int[][] matrix, int target) { // Solution is O(m*n) and not O(log(m * n))
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {

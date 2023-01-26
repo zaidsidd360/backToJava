@@ -1,9 +1,9 @@
 // Given an array nums containing n distinct numbers in the range [0, n], 
 // return the only number in the range that is missing from the array.
 
-package LeetCode;
+package LeetCode.Easy;
 
-public class MissingNum {
+public class MissingNum { // 268
     public static int findSumUptoRange(int nums[]) {
         int sum = 0;
         int n = nums.length;

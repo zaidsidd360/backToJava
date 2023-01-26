@@ -1,8 +1,8 @@
 // Given an integer x, return true if x is a palindrome and false otherwise.
 
-package LeetCode;
+package LeetCode.Easy;
 
-public class Palindrome {
+public class Palindrome { // 09
     public static boolean isPalindrome(int x) {
         if (x < 0)
             return false;

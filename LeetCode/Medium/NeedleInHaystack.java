@@ -1,6 +1,10 @@
-package LeetCode;
+// Given two strings needle and haystack, return the index 
+// of the first occurrence of needle in haystack, or -1 if 
+// needle is not part of haystack.
 
-public class NeedleInHaystack {
+package LeetCode.Medium;
+
+public class NeedleInHaystack { // 28
     public static int fineNeedleInHaystack(String needle, String haystack) {
         if (haystack == null || needle == null)
             return -1;
@@ -19,5 +23,5 @@ public class NeedleInHaystack {
 
     public static void main(String[] args) {
         System.out.println(fineNeedleInHaystack("issi", "mississippi"));
-    } // INCOMPLETE
+    }
 }

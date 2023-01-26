@@ -5,10 +5,9 @@
 // Return the absolute difference between the element sum and digit sum of nums.
 // Note that the absolute difference between two integers x and y is defined as |x - y|.
 
-package LeetCode;
+package LeetCode.Easy;
 
-public class DifferenceOfSum {
-
+public class DifferenceOfSum { // 2535
     public static int findSumOfElements(int arr[]) {
         int sumOfElements = 0;
         for (int i = 0; i < arr.length; i++) {
