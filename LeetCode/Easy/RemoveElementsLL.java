@@ -8,7 +8,7 @@ package LeetCode.Easy;
 import LeetCode.lcdefinitions.ListNode;
 
 // Code won't work locally as it follows LC's implementation of a LinkedList.
-class RemoveElementsLL { // 203
+public class RemoveElementsLL { // 203
     public ListNode removeElements(ListNode head, int val) {
         if (head == null)
             return head;
