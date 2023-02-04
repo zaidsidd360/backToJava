@@ -22,6 +22,7 @@ class FirstUniqueChar { // 387
     }
 
     public static void main(String[] args) {
-
+        String str = "Leetcodeisnice";
+        System.out.println(firstUniqChar(str));
     }
 }

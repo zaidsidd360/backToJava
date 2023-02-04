@@ -6,11 +6,11 @@ public class PrimeRecursive {
             if (fac == 2)
                 System.out.println(n + " is a prime number.");
             else
-                System.out.println(n + " is not a prime number.");
+                System.out.println(n + " is NOT a prime number.");
             return;
         }
 
-        if (n % i == 0) 
+        if (n % i == 0)
             fac += 1;
         checkPrimeRecursive(n, i + 1, fac);
     }

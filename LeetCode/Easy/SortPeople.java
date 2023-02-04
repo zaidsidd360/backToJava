@@ -32,7 +32,7 @@ public class SortPeople { // 2418
         return names;
     }
 
-    public String[] sortPeople2(String[] names, int[] heights) { // Optimized implementation; LC runtime 5ms
+    public static String[] sortPeople2(String[] names, int[] heights) { // Optimized implementation; LC runtime 5ms
         HashMap<Integer, String> map = new HashMap<>();
         for (int i = 0; i < names.length; i++) {
             map.put(heights[i], names[i]);
@@ -45,5 +45,14 @@ public class SortPeople { // 2418
             ind++;
         }
         return names;
+    }
+
+    public static void main(String[] args) {
+        String names[] = { "Mary", "John", "Emma" };
+        int heights[] = { 180, 165, 170 };
+        String sortedNames[] = sortPeople2(names, heights);
+        for (String name : sortedNames) {
+            System.out.println(name + " ");
+        }
     }
 }

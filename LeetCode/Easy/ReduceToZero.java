@@ -5,7 +5,7 @@
 package LeetCode.Easy;
 
 public class ReduceToZero { // 1342
-    public int numberOfSteps(int num) {
+    public static int numberOfSteps(int num) {
         int count = 0;
         while (num != 0) {
             if (num % 2 == 0)
@@ -15,5 +15,10 @@ public class ReduceToZero { // 1342
             count++;
         }
         return count;
+    }
+
+    public static void main(String[] args) {
+        int num = 46;
+        System.out.println(numberOfSteps(num));
     }
 }

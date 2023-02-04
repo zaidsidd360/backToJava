@@ -7,7 +7,7 @@ package LeetCode.Easy;
 import java.util.*;
 
 public class IntersectionOfArrays { // 349
-    public int[] intersection(int[] nums1, int[] nums2) {
+    public static int[] intersection(int[] nums1, int[] nums2) {
         HashMap<Integer, Boolean> map = new HashMap<>();
         for (int i = 0; i < nums1.length; i++) {
             map.put(nums1[i], false);
@@ -28,5 +28,14 @@ public class IntersectionOfArrays { // 349
             res[k] = list.get(k);
         }
         return res;
+    }
+
+    public static void main(String[] args) {
+        int nums1[] = { 1, 2, 2, 1 };
+        int nums2[] = { 2, 2 };
+        int intersection[] = intersection(nums1, nums2);
+        for (int i : intersection) {
+            System.out.println(i);
+        }
     }
 }
