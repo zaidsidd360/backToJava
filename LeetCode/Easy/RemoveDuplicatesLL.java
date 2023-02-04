@@ -4,21 +4,8 @@
 
 package LeetCode.Easy;
 
-import java.util.*;
-
 // LeetCode's definition for singly-linked list.
-// class ListNode {
-//     int val;
-//     ListNode next;
-//     ListNode() { }
-//     ListNode(int val) {
-//         this.val = val;
-//     }
-//     ListNode(int val, ListNode next) {
-//         this.val = val;
-//         this.next = next;
-//     }
-// }
+import LeetCode.lcdefinitions.ListNode;
 
 // Code won't work locally as it follows LC's implementation of a LinkedList.
 public class RemoveDuplicatesLL { // 83
