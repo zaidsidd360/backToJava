@@ -1,5 +1,12 @@
 package SpectrumClasses;
 
+// Initialize a student class with the following properties:
+// int age; char gender;
+// and the following methods:
+// getAge()  returns age; setAge(int val) sets the age to val;
+// getGender() returns gender; setGender(int val) sets the gender to val;
+// Also create a constructor to initialize the properties.
+
 class Student {
     private int age;
     private char gender;

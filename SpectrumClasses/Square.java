@@ -1,5 +1,7 @@
 package SpectrumClasses;
 
+// Print the series: 5, 25, 125, 625, 3125... upto n. 
+
 public class Square {
     public static void printSquare(int n) {
         int pow = 1;

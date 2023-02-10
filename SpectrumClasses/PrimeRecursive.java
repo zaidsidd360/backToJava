@@ -1,5 +1,7 @@
 package SpectrumClasses;
 
+// Check whether a given number is prime or not using recursion.
+
 public class PrimeRecursive {
     public static void checkPrimeRecursive(int n, int i, int fac) {
         if (i == n + 1) {

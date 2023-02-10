@@ -1,5 +1,7 @@
 package SpectrumClasses;
 
+// Find if a number exists in a given array.
+
 public class NumSearch {
     public static void findNum(int num, int arr[]) {
         boolean found = false;

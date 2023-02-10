@@ -1,5 +1,7 @@
 package SpectrumClasses;
 
+// Design a calculator which keeps asking for inputs until the user enters 0 to quit.
+
 import java.util.Scanner;
 
 public class CalculatorWhile {

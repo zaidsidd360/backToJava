@@ -1,5 +1,7 @@
 package SpectrumClasses;
 
+// Reverse a given array of integers.
+
 public class ReverseArray {
     public static int[] reverseArray(int[] arr) {
         int[] reversedArray = new int[arr.length];

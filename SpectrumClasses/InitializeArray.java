@@ -1,5 +1,7 @@
 package SpectrumClasses;
 
+// Initialize an array with user defined length and user given elements.
+
 import java.util.Scanner;
 
 public class InitializeArray {

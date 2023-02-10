@@ -1,5 +1,7 @@
 package SpectrumClasses;
 
+// Ask the user for a number as input, if the input is between 1 and 10, print "Congrats!". Else, repeat.
+
 import java.util.Scanner;
 
 public class BetweenOneAndTen {

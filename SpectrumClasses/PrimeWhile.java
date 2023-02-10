@@ -1,5 +1,7 @@
 package SpectrumClasses;
 
+// Check whether a given number is a prime number using a while loop.
+
 public class PrimeWhile {
     public static boolean checkPrime(int num) {
         int factors = 0;

@@ -1,5 +1,7 @@
 package SpectrumClasses;
 
+// Print the fibonacci sequence.
+
 public class Fibonacci {
     public static void fibonacci(int n) {
         int fst = 0;

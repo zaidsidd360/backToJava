@@ -1,5 +1,7 @@
 package SpectrumClasses;
 
+// Design a Math class with methods for addition, subtraction, multiplication, and division.
+
 class Maths {
     public int sum(int a, int b) {
         return a + b;

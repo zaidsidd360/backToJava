@@ -1,5 +1,7 @@
 package SpectrumClasses;
 
+// Given a array of integers, print the peaks of the array.
+
 public class Peaks {
     public static void printPeaks(double arr[]) {
         double t;

@@ -1,5 +1,7 @@
 package SpectrumClasses;
 
+// Check if a given number is a prime number.
+
 public class Prime {
     public static void checkPrime(int num) {
         int factors = 0;

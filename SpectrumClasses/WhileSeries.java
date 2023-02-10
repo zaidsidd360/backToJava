@@ -1,5 +1,7 @@
 package SpectrumClasses;
 
+// Print the series: 2, 4, 6, 8, 10, 12, 14... upto n using a while loop.
+
 public class WhileSeries {
     public static void printSeries(int n) {
         int sum = 0;

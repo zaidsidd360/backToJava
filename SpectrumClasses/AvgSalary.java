@@ -1,5 +1,7 @@
 package SpectrumClasses;
 
+// Given an array of salaries, calculate the average salary.
+
 public class AvgSalary {
     public static double calculateAvgSalary(double salaries[]) {
         double sumOfSalaries = 0;
