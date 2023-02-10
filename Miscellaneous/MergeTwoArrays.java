@@ -19,8 +19,8 @@ public class MergeTwoArrays {
         int arr1[] = { 1, 2, 3, 4, 5 };
         int arr2[] = { 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
         int mergedArray[] = mergeTwoArrays(arr1, arr2);
-        for (int i = 0; i < mergedArray.length; i++) {
-            System.out.print(mergedArray[i] + " ");
+        for (int e : mergedArray) {
+            System.out.println(e + " ");
         }
     }
 }
