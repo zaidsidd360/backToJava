@@ -7,12 +7,28 @@
 package LeetCode.Medium;
 
 public class SearchMatrix { // 74
-    public static boolean searchMatrix(int[][] matrix, int target) { // Solution is O(m*n) and not O(log(m * n))
+    // Time Complexity: O(m*n)
+    public static boolean searchMatrix(int[][] matrix, int target) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 if (matrix[i][j] == target)
                     return true;
             }
+        }
+        return false;
+    }
+
+    // Time Complexity: O(n+m)
+    public static boolean searchMatrix2(int[][] matrix, int target) {
+        int low = 0;
+        int high = matrix[0].length - 1;
+        while (low < matrix.length && high >= 0) {
+            if (matrix[low][high] == target)
+                return true;
+            else if (matrix[low][high] > target)
+                high--;
+            else
+                low++;
         }
         return false;
     }
@@ -23,6 +39,6 @@ public class SearchMatrix { // 74
                 { 23, 30, 34, 60 } };
 
         int target = 3;
-        System.out.println(searchMatrix(m, target));
+        System.out.println(searchMatrix2(m, target));
     }
 }
