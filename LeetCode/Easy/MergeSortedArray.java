@@ -8,6 +8,8 @@
 
 package LeetCode.Easy;
 
+import java.util.*;
+
 public class MergeSortedArray { // 88
     public static void mergeAndSort(int[] nums1, int m, int[] nums2, int n) {
         int j = 0;
@@ -26,11 +28,20 @@ public class MergeSortedArray { // 88
         }
     }
 
+    public static void mergeAndSort2(int[] nums1, int m, int[] nums2, int n) {
+        int j = 0;
+        for (int i = m; i < m + n; i++) {
+            nums1[i] = nums2[j];
+            j++;
+        }
+        Arrays.sort(nums1);
+    }
+
     public static void main(String[] args) {
         int nums1[] = { 1, 2, 3, 0, 0, 0 };
         int nums2[] = { 4, 5, 6 };
         int m = 3;
         int n = 3;
-        mergeAndSort(nums1, m, nums2, n);
+        mergeAndSort2(nums1, m, nums2, n);
     }
 }
