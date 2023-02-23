@@ -1,4 +1,4 @@
-package DataStructures.LinkedList;
+package DataStructuresImplementations;
 
 class LinkedList<T> {
     Node head;
@@ -85,6 +85,7 @@ class LinkedList<T> {
         currNode.next = null;
     }
 }
+
 
 public class LinkedListImplementation {
     public static void main(String[] args) {
