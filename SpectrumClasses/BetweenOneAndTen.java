@@ -18,5 +18,6 @@ public class BetweenOneAndTen {
                 System.out.println("Please enter a number between 1 and 10(inclusive)!");
             }
         }
+        sc.close();
     }
 }
