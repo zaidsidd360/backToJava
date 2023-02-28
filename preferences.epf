@@ -1,4 +1,4 @@
-#Tue Feb 28 20:03:00 IST 2023
+#Tue Feb 28 20:15:13 IST 2023
 \!/=
 /configuration/org.eclipse.core.net/org.eclipse.core.net.hasMigrated=true
 /configuration/org.eclipse.ui.ide/MAX_RECENT_WORKSPACES=10
@@ -1478,7 +1478,6 @@
 /instance/org.eclipse.jdt.ui/content_assist_proposals_background=39,39,39
 /instance/org.eclipse.jdt.ui/content_assist_proposals_foreground=255,255,255
 /instance/org.eclipse.jdt.ui/editor_folding_default_headers=false
-/instance/org.eclipse.jdt.ui/editor_folding_enabled=false
 /instance/org.eclipse.jdt.ui/editor_save_participant_org.eclipse.jdt.ui.postsavelistener.cleanup=true
 /instance/org.eclipse.jdt.ui/enclosingBrackets=true
 /instance/org.eclipse.jdt.ui/formatter_profile=org.eclipse.jdt.ui.default.eclipse_profile
@@ -1796,7 +1795,7 @@
 /instance/org.eclipse.tm4e.registry/org.eclipse.tm4e.registry.grammars=[]
 /instance/org.eclipse.tm4e.ui/org.eclipse.tm4e.ui.themeAssociations=[]
 /instance/org.eclipse.tm4e.ui/org.eclipse.tm4e.ui.themes=[]
-/instance/org.eclipse.ui.editors/AbstractTextEditor.Color.Background=39,39,39
+/instance/org.eclipse.ui.editors/AbstractTextEditor.Color.Background=47,47,47
 /instance/org.eclipse.ui.editors/AbstractTextEditor.Color.Background.SystemDefault=false
 /instance/org.eclipse.ui.editors/AbstractTextEditor.Color.FindScope=255,255,255
 /instance/org.eclipse.ui.editors/AbstractTextEditor.Color.Foreground=208,208,208
