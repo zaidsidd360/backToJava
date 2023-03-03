@@ -17,11 +17,16 @@ public class MobilePhone {
 		return false;
 	}
 
+	@Override
+	public String toString() {
+		return ("Model Name: " + this.modelName + "; Model Number: " + this.modelNumber);
+	}
+
 	public static void main(String[] args) {
 
 		MobilePhone mp = new MobilePhone("Realme 6pro", 234423);
 		MobilePhone mp2 = new MobilePhone("Realme 6pro", 234423);
-
+		mp.toString();
 		System.out.println(mp.equals(mp2));
 
 	}
