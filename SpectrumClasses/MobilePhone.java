@@ -26,9 +26,7 @@ public class MobilePhone {
 
 		MobilePhone mp = new MobilePhone("Realme 6pro", 234423);
 		MobilePhone mp2 = new MobilePhone("Realme 6pro", 234423);
-		mp.toString();
 		System.out.println(mp.equals(mp2));
-
+		System.out.println(mp.toString());
 	}
-
 }
