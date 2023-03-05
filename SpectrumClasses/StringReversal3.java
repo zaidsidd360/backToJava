@@ -11,9 +11,8 @@ public class StringReversal3 {
 			}
 			arr[i] = currStr;
 		}
-		for (String str : arr) {
+		for (String str : arr)
 			ans += str + " ";
-		}
 		return ans;
 	}
 
