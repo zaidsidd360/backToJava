@@ -6,7 +6,7 @@ class ArrayList<T> {
 	private Object[] internalArray;
 
 	/*
-	 * Parameterized constructor. Constructs a list with the given capacity
+	 * Parameterized constructor. Constructs a list with the given capacity.
 	 */
 	public ArrayList(int initialCapacity) throws Exception {
 		if (initialCapacity < 0)
@@ -65,6 +65,40 @@ class ArrayList<T> {
 		size--;
 		if (size <= 0.25 * capacity)
 			capacity /= 2;
+	}
+
+	/*
+	 * Removes the first occurance of the given element from the list.
+	 */
+	public void remove(T val) {
+		for (int i = 0; i < size; i++) {
+			if (internalArray[i].equals(val)) {
+				delete(i);
+			}
+		}
+		if (size <= 0.25 * capacity)
+			capacity /= 2;
+	}
+
+	/*
+	 * Removes all the occurances of the given element from the list.
+	 */
+	public void removeAll(T val) {
+		int length = 0;
+		for (int i = 0; i < size; i++) {
+			if (internalArray[i].equals(val))
+				length++;
+		}
+		int indices[] = new int[length];
+		int count = 0;
+		for (int i = 0; i < size; i++) {
+			if (internalArray[i].equals(val))
+				indices[count++] = i;
+		}
+		count = 0;
+		for (int i = 0; i < length; i++) {
+			delete(indices[i] - count++);
+		}
 	}
 
 	/*
@@ -193,9 +227,12 @@ public class ArrayListImplementation {
 		names.add("Adib");
 		names.add("Maroof");
 		names.add("Maroof");
+		names.add("Maroof");
 		names.print();
-		names.add(0, "Zaid");
+		names.add(0, "Maroof");
 		names.add(3, "Nafis");
+		names.print();
+		names.removeAll("Maroof");
 		names.print();
 		System.out.println(names.indexOf("Maroof") + " " + names.lastIndexOf("Maroof") + " " + names.get(2) + " "
 				+ names.isEmpty() + " " + names.size() + " " + names.lastIndexOf("Waqqas"));
