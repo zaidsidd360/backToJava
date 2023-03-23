@@ -63,8 +63,10 @@ class ArrayList<T> {
 			internalArray[i] = internalArray[i + 1];
 		}
 		size--;
-		if (size <= 0.25 * capacity)
+		if (size <= 0.25 * capacity) {
 			capacity /= 2;
+			this.resize(capacity);
+		}
 	}
 
 	/*
@@ -76,8 +78,10 @@ class ArrayList<T> {
 				delete(i);
 			}
 		}
-		if (size <= 0.25 * capacity)
+		if (size <= 0.25 * capacity) {
 			capacity /= 2;
+			this.resize(capacity);
+		}
 	}
 
 	/*
