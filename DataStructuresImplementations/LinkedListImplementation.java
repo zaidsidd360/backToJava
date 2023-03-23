@@ -1,107 +1,67 @@
 package DataStructuresImplementations;
 
 class LinkedList<T> {
-    Node head;
-    int size;
+	/*
+	 * ListNode class for each node of the LinkedList.
+	 */
+	class ListNode {
+		T value;
+		ListNode next;
 
-    LinkedList() {
-        this.size = 0;
-    }
+		/*
+		 * Constructor for an individual ListNode.
+		 */
+		public ListNode(T val) {
+			this.value = val;
+			this.next = null;
+		}
+	}
 
-    class Node {
-        T data;
-        Node next;
+	/* Head of the list. */
+	public ListNode head;
+	/* Tail of the list. */
+	public ListNode tail;
 
-        Node(T data) {
-            this.data = data;
-            this.next = null;
-            size++;
-        }
-    }
+	/*
+	 * Constructor for our LinkedList class.
+	 */
+	public LinkedList() {
+		this.head = new ListNode(null);
+		this.tail = this.head;
+	}
 
-    public void addFirst(T data) {
-        Node newNode = new Node(data);
-        if (head == null) {
-            head = newNode;
-            return;
-        }
-        newNode.next = head;
-        head = newNode;
-    }
+	/*
+	 * Adds the given value to the tail of the list.
+	 */
+	public void add(T val) {
+		tail.next = new ListNode(val);
+		tail = tail.next;
+	}
 
-    public void addLast(T data) {
-        Node newNode = new Node(data);
-        if (head == null) {
-            head = newNode;
-            return;
-        }
-        Node currNode = head;
-        while (currNode.next != null) {
-            currNode = currNode.next;
-        }
-        currNode.next = newNode;
-    }
-
-    public void printList() {
-        if (head == null) {
-            System.out.println("List is empty");
-            return;
-        }
-        Node currNode = head;
-        while (currNode != null) {
-            System.out.print(currNode.data + " -> ");
-            currNode = currNode.next;
-        }
-        System.out.print("null");
-    }
-
-    public int size() {
-        return this.size;
-    }
-
-    public void deleteFirst() {
-        if (head == null) {
-            System.out.println("List is empty");
-            return;
-        }
-        size--;
-        head = head.next;
-    }
-
-    public void deleteLast() {
-        if (head == null) {
-            System.out.println("List is empty");
-            return;
-        }
-        size--;
-        if (head.next == null) {
-            head = null;
-            return;
-        }
-        Node currNode = head;
-        while (currNode.next.next != null) {
-            currNode = currNode.next;
-        }
-        currNode.next = null;
-    }
+	/*
+	 * Prints the list.
+	 */
+	public void print() {
+		ListNode curr = head.next;
+		while (curr != null) {
+			System.out.print(curr.value + " -> ");
+			curr = curr.next;
+		}
+		System.out.print("null");
+		System.out.println();
+	}
 }
 
-
 public class LinkedListImplementation {
-    public static void main(String[] args) {
-        LinkedList<Integer> list = new LinkedList<>();
-        for (int i = 10; i > 0; i--) {
-            list.addLast(i);
-        }
-        list.printList();
-        System.out.println();
-        for (int i = 0; i < 10; i++) {
-            list.deleteLast();
-        }
-        list.printList();
-        System.out.println(list.size());
 
-        LinkedList<Integer> list2 = new LinkedList<>();
-        System.out.println(list2.size());
-    }
+	public static void main(String[] args) {
+		LinkedList<Integer> list = new LinkedList<>();
+		list.add(1);
+		list.add(2);
+		list.add(3);
+		for (int i = 4; i <= 25; i++)
+			list.add(i);
+		list.print();
+	}
+
 }
