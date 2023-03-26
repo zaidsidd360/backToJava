@@ -1,6 +1,6 @@
 package DataStructuresImplementations;
 
-class LinkedList<T> {
+class LinkedList<T> implements List<T> {
 	/*
 	 * ListNode class for each node of the LinkedList.
 	 */
@@ -70,6 +70,31 @@ class LinkedList<T> {
 	}
 
 	/*
+	 * Deletes the element present at the specified index from the list.
+	 */
+	public void delete(int index) {
+		if (index >= this.size || index < 0)
+			throw new IndexOutOfBoundsException();
+		if (index == 0) {
+			head.next = head.next.next;
+			size--;
+			return;
+		}
+		int i = 0;
+		ListNode curr = head.next;
+		while (curr != null) {
+			if (i == index - 1) {
+				curr.next = curr.next.next;
+				if (index == size - 1)
+					tail = curr;
+				size--;
+			}
+			i++;
+			curr = curr.next;
+		}
+	}
+
+	/*
 	 * Returns the first element in the list.
 	 */
 	public T getFirst() {
@@ -121,10 +146,11 @@ public class LinkedListImplementation {
 		for (int i = 4; i <= 10; i++)
 			list.add(i);
 		list.insert(9, 69);
-		System.out.println(list.getLast());
-		list.add(69420);
-		System.out.println(list.getLast());
 		list.print();
+		System.out.println(list.getFirst());
+		list.delete(5);
+		list.print();
+		System.out.println(list.getFirst());
 	}
 
 }

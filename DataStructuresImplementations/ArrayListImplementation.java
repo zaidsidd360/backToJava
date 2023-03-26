@@ -1,6 +1,6 @@
 package DataStructuresImplementations;
 
-class ArrayList<T> {
+class ArrayList<T> implements List<T> {
 	private int capacity = 16;
 	private int size = 0;
 	private Object[] internalArray;
@@ -39,7 +39,7 @@ class ArrayList<T> {
 	 * Inserts the given element at the specified index in the list. Complexity:
 	 * O(n)
 	 */
-	public void add(int index, T val) {
+	public void insert(int index, T val) {
 		if (index >= size)
 			throw new IndexOutOfBoundsException();
 		if (size == capacity - 2) {
@@ -109,7 +109,7 @@ class ArrayList<T> {
 	 * Replaces all occurances of a specified value with the given value to be
 	 * replaced with.
 	 */
-	public void replace(T valToReplace, T valToBeReplacedWith) {
+	public void replaceAll(T valToReplace, T valToBeReplacedWith) {
 		for (int i = 0; i < size; i++) {
 			if (internalArray[i].equals(valToReplace))
 				internalArray[i] = valToBeReplacedWith;
@@ -225,7 +225,7 @@ class ArrayList<T> {
 
 public class ArrayListImplementation {
 	public static void main(String[] args) throws Exception {
-		ArrayList<String> names = new ArrayList<>();
+		List<String> names = new ArrayList<>();
 
 		names.add("Tausif");
 		names.add("Adib");
@@ -233,8 +233,8 @@ public class ArrayListImplementation {
 		names.add("Maroof");
 		names.add("Maroof");
 		names.print();
-		names.add(0, "Maroof");
-		names.add(3, "Nafis");
+		names.insert(0, "Maroof");
+		names.insert(3, "Nafis");
 		names.print();
 		names.removeAll("Maroof");
 		names.print();
