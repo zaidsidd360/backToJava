@@ -28,9 +28,9 @@ class LinkedList<T> implements List<T> {
 	 * Constructor for our LinkedList class.
 	 */
 	public LinkedList() {
-		this.head = new ListNode(null);
-		this.tail = this.head;
-		this.size = 0;
+		head = new ListNode(null);
+		tail = head;
+		size = 0;
 	}
 
 	/*
@@ -95,6 +95,22 @@ class LinkedList<T> implements List<T> {
 	}
 
 	/*
+	 * Removes the first occurance of the given element from the list.
+	 */
+	public void remove(T val) {
+		int i = 0;
+		ListNode curr = head.next;
+		while (curr != null) {
+			if (curr.value.equals(val)) {
+				this.delete(i);
+				return;
+			}
+			curr = curr.next;
+			i++;
+		}
+	}
+
+	/*
 	 * Returns the first element in the list.
 	 */
 	public T getFirst() {
@@ -134,6 +150,54 @@ class LinkedList<T> implements List<T> {
 		System.out.print("null");
 		System.out.println();
 	}
+
+	@Override
+	public void removeAll(T val) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void replaceAll(T valToReplace, T valToBeReplacedWith) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Object get(int index) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void set(int index, T val) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public boolean contains(T val) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public int indexOf(T val) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int lastIndexOf(T val) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void clear() {
+		// TODO Auto-generated method stub
+
+	}
 }
 
 public class LinkedListImplementation {
@@ -149,6 +213,7 @@ public class LinkedListImplementation {
 		list.print();
 		System.out.println(list.getFirst());
 		list.delete(5);
+		list.remove(9);
 		list.print();
 		System.out.println(list.getFirst());
 	}
