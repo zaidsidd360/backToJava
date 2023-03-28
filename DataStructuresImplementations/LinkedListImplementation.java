@@ -111,6 +111,19 @@ class LinkedList<T> implements List<T> {
 	}
 
 	/*
+	 * Removes all the occurances of the given element from the list.
+	 */
+	public void removeAll(T val) {
+		ListNode curr = head;
+		while (curr.next != null) {
+			if (curr.next.value.equals(val))
+				curr.next = curr.next.next;
+			else
+				curr = curr.next;
+		}
+	}
+
+	/*
 	 * Returns the first element in the list.
 	 */
 	public T getFirst() {
@@ -149,12 +162,6 @@ class LinkedList<T> implements List<T> {
 		}
 		System.out.print("null");
 		System.out.println();
-	}
-
-	@Override
-	public void removeAll(T val) {
-		// TODO Auto-generated method stub
-
 	}
 
 	@Override
@@ -204,18 +211,21 @@ public class LinkedListImplementation {
 
 	public static void main(String[] args) {
 		LinkedList<Integer> list = new LinkedList<>();
-		list.add(1);
+		list.add(3);
 		list.add(2);
+		list.add(3);
 		list.add(3);
 		for (int i = 4; i <= 10; i++)
 			list.add(i);
+		list.add(3);
+		list.add(3);
 		list.insert(9, 69);
 		list.print();
-		System.out.println(list.getFirst());
-		list.delete(5);
-		list.remove(9);
+//		System.out.println(list.getFirst());
+		list.removeAll(3);
+//		list.delete(5);
 		list.print();
-		System.out.println(list.getFirst());
+//		System.out.println(list.getFirst());
 	}
 
 }
