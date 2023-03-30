@@ -124,6 +124,19 @@ class LinkedList<T> implements List<T> {
 	}
 
 	/*
+	 * Replaces all occurances of a specified value with the given value to be
+	 * replaced with.
+	 */
+	public void replaceAll(T valToReplace, T valToBeReplacedWith) {
+		ListNode curr = head.next;
+		while (curr != null) {
+			if (curr.value.equals(valToReplace))
+				curr.value = valToBeReplacedWith;
+			curr = curr.next;
+		}
+	}
+
+	/*
 	 * Returns the first element in the list.
 	 */
 	public T getFirst() {
@@ -165,13 +178,7 @@ class LinkedList<T> implements List<T> {
 	}
 
 	@Override
-	public void replaceAll(T valToReplace, T valToBeReplacedWith) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public Object get(int index) {
+	public T get(int index) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -222,7 +229,7 @@ public class LinkedListImplementation {
 		list.insert(9, 69);
 		list.print();
 //		System.out.println(list.getFirst());
-		list.removeAll(3);
+		list.replaceAll(3, 69);
 //		list.delete(5);
 		list.print();
 //		System.out.println(list.getFirst());
