@@ -116,9 +116,10 @@ class LinkedList<T> implements List<T> {
 	public void removeAll(T val) {
 		ListNode curr = head;
 		while (curr.next != null) {
-			if (curr.next.value.equals(val))
+			if (curr.next.value.equals(val)) {
 				curr.next = curr.next.next;
-			else
+				size--;
+			} else
 				curr = curr.next;
 		}
 	}
@@ -133,6 +134,45 @@ class LinkedList<T> implements List<T> {
 			if (curr.value.equals(valToReplace))
 				curr.value = valToBeReplacedWith;
 			curr = curr.next;
+		}
+	}
+
+	/*
+	 * Gets the value at a given index. Throws indexOutOfBounds exception if given
+	 * index is out of bounds.
+	 */
+	@SuppressWarnings("unchecked")
+	public T get(int index) {
+		if (index >= this.size || index < 0)
+			throw new IndexOutOfBoundsException();
+		ListNode curr = head.next;
+		int i = 0;
+		while (curr != null) {
+			if (i == index) {
+				return curr.value;
+			}
+			curr = curr.next;
+			i++;
+		}
+		return (T) "-1";
+	}
+
+	/*
+	 * Replaces the specified element in the list, present at the specified index.
+	 * Throws indexOutOfBounds exception if given index is out of bounds.
+	 */
+	public void set(int index, T val) {
+		if (index >= this.size || index < 0)
+			throw new IndexOutOfBoundsException();
+		ListNode curr = head.next;
+		int i = 0;
+		while (curr != null) {
+			if (i == index) {
+				curr.value = val;
+				return;
+			}
+			curr = curr.next;
+			i++;
 		}
 	}
 
@@ -178,18 +218,6 @@ class LinkedList<T> implements List<T> {
 	}
 
 	@Override
-	public T get(int index) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void set(int index, T val) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
 	public boolean contains(T val) {
 		// TODO Auto-generated method stub
 		return false;
@@ -228,11 +256,11 @@ public class LinkedListImplementation {
 		list.add(3);
 		list.insert(9, 69);
 		list.print();
-//		System.out.println(list.getFirst());
-		list.replaceAll(3, 69);
-//		list.delete(5);
+		System.out.println(list.size());
+		list.remove(3);
+		list.set(0, 222);
 		list.print();
-//		System.out.println(list.getFirst());
+		System.out.println(list.get(0));
 	}
 
 }
