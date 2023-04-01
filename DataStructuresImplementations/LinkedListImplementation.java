@@ -177,17 +177,56 @@ class LinkedList<T> implements List<T> {
 	}
 
 	/*
-	 * Returns the first element in the list.
+	 * Returns true if the list contains the given element, false otherwise.
 	 */
-	public T getFirst() {
-		return head.next.value;
+	public boolean contains(T val) {
+		ListNode curr = head.next;
+		while (curr != null) {
+			if (curr.value.equals(val))
+				return true;
+			curr = curr.next;
+		}
+		return false;
 	}
 
 	/*
-	 * Returns the last element in the list.
+	 * Return the first index of the specified element, or -1 if the list does not
+	 * contain the element.
 	 */
-	public T getLast() {
-		return tail.value;
+	public int indexOf(T val) {
+		ListNode curr = head.next;
+		int i = 0;
+		while (curr != null) {
+			if (curr.value.equals(val))
+				return i;
+			curr = curr.next;
+			i++;
+		}
+		return -1;
+	}
+
+	/*
+	 * Return the index of the last occurrence of the specified element, or -1 if
+	 * the list does not contain the element.
+	 */
+	public int lastIndexOf(T val) {
+		ListNode curr = head.next;
+		int i = 0;
+		int ans = -1;
+		while (curr != null) {
+			if (curr.value.equals(val))
+				ans = i;
+			curr = curr.next;
+			i++;
+		}
+		return ans;
+	}
+
+	/*
+	 * Returns true if the list is empty, false otherwise.
+	 */
+	public boolean isEmpty() {
+		return this.size == 0;
 	}
 
 	/*
@@ -198,10 +237,11 @@ class LinkedList<T> implements List<T> {
 	}
 
 	/*
-	 * Returns true if the list is empty, false otherwise.
+	 * Removes all elements from the list.
 	 */
-	public boolean isEmpty() {
-		return this.size == 0;
+	public void clear() {
+		this.size = 0;
+		head.next = null;
 	}
 
 	/*
@@ -218,32 +258,44 @@ class LinkedList<T> implements List<T> {
 	}
 
 	@Override
-	public boolean contains(T val) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public int indexOf(T val) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int lastIndexOf(T val) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public void clear() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
 	public void reverse() {
 		// TODO Auto-generated method stub
+	}
+
+	/* The following are LinkedList specific methods : */
+
+	/*
+	 * Returns the first element in the list.
+	 */
+	public T peekFirst() {
+		return head.next.value;
+	}
+
+	/*
+	 * Returns the last element in the list.
+	 */
+	public T peekLast() {
+		return tail.value;
+	}
+
+	public T getFirst() {
+		T value = head.next.value;
+		head = head.next;
+		return value;
+	}
+
+	public T getLast() {
+		ListNode curr = head.next;
+		int i = 0;
+		T value = tail.value;
+		while (curr != null) {
+			if (i == size - 2) {
+				curr.next = curr.next.next;
+			} else
+				curr = curr.next;
+			i++;
+		}
+		return value;
 	}
 }
 
@@ -265,7 +317,10 @@ public class LinkedListImplementation {
 		list.remove(3);
 		list.set(0, 222);
 		list.print();
+		System.out.println(list.lastIndexOf(23));
 		System.out.println(list.get(0));
+		System.out.println(list.getLast());
+		list.print();
 	}
 
 }
