@@ -32,4 +32,6 @@ public interface List<T> {
 
 	public void print();
 
+	public void reverse();
+
 }

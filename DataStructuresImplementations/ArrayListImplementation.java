@@ -196,6 +196,22 @@ class ArrayList<T> implements List<T> {
 	}
 
 	/*
+	 * Reverses the list in place.
+	 */
+	@SuppressWarnings("unchecked")
+	public void reverse() {
+		int i = 0;
+		int j = this.size - 1;
+		while (i < j) {
+			T temp = (T) internalArray[i];
+			internalArray[i] = internalArray[j];
+			internalArray[j] = temp;
+			i++;
+			j--;
+		}
+	}
+
+	/*
 	 * Prints the list. Complexity: O(n)
 	 */
 	public void print() {
@@ -237,6 +253,8 @@ public class ArrayListImplementation {
 		names.insert(3, "Nafis");
 		names.print();
 		names.removeAll("Maroof");
+		names.print();
+		names.reverse();
 		names.print();
 		System.out.println(names.indexOf("Maroof") + " " + names.lastIndexOf("Maroof") + " " + names.get(2) + " "
 				+ names.isEmpty() + " " + names.size() + " " + names.lastIndexOf("Waqqas"));

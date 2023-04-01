@@ -240,6 +240,11 @@ class LinkedList<T> implements List<T> {
 		// TODO Auto-generated method stub
 
 	}
+
+	@Override
+	public void reverse() {
+		// TODO Auto-generated method stub
+	}
 }
 
 public class LinkedListImplementation {
