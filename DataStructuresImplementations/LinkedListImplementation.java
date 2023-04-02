@@ -245,6 +245,22 @@ class LinkedList<T> implements List<T> {
 	}
 
 	/*
+	 * Reverses the list in place.
+	 */
+	public void reverse() {
+		ListNode prev = null;
+		ListNode curr = head.next;
+		ListNode next = null;
+		while (curr != null) {
+			next = curr.next;
+			curr.next = prev;
+			prev = curr;
+			curr = next;
+		}
+		head.next = prev;
+	}
+
+	/*
 	 * Prints the list.
 	 */
 	public void print() {
@@ -257,12 +273,7 @@ class LinkedList<T> implements List<T> {
 		System.out.println();
 	}
 
-	@Override
-	public void reverse() {
-		// TODO Auto-generated method stub
-	}
-
-	/* The following are LinkedList specific methods : */
+	/**** The following are LinkedList specific methods : ****/
 
 	/*
 	 * Returns the first element in the list.
@@ -278,12 +289,18 @@ class LinkedList<T> implements List<T> {
 		return tail.value;
 	}
 
+	/*
+	 * Removes the first element from the list and returns its value.
+	 */
 	public T getFirst() {
 		T value = head.next.value;
 		head = head.next;
 		return value;
 	}
 
+	/*
+	 * Removes the last element from the list and returns its value.
+	 */
 	public T getLast() {
 		ListNode curr = head.next;
 		int i = 0;
@@ -317,10 +334,7 @@ public class LinkedListImplementation {
 		list.remove(3);
 		list.set(0, 222);
 		list.print();
-		System.out.println(list.lastIndexOf(23));
-		System.out.println(list.get(0));
-		System.out.println(list.getLast());
+		list.reverse();
 		list.print();
 	}
-
 }
