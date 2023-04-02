@@ -154,7 +154,7 @@ class LinkedList<T> implements List<T> {
 			curr = curr.next;
 			i++;
 		}
-		return (T) "-1";
+		return null;
 	}
 
 	/*
@@ -314,6 +314,23 @@ class LinkedList<T> implements List<T> {
 		}
 		return value;
 	}
+
+	/*
+	 * Returns the element at the nth position from the end of the list.
+	 */
+	public T getNthFromEnd(int n) {
+		if (n >= this.size || n < 0)
+			throw new IndexOutOfBoundsException();
+		ListNode curr = head.next;
+		int i = 0;
+		while (curr != null) {
+			if (i == this.size - n - 1)
+				return curr.value;
+			curr = curr.next;
+			i++;
+		}
+		return null;
+	}
 }
 
 public class LinkedListImplementation {
@@ -336,5 +353,6 @@ public class LinkedListImplementation {
 		list.print();
 		list.reverse();
 		list.print();
+		System.out.println(list.getNthFromEnd(1));
 	}
 }
