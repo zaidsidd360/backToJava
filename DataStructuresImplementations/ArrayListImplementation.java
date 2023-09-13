@@ -5,12 +5,14 @@ class ArrayList<T> implements List<T> {
 	private int size = 0;
 	private Object[] internalArray;
 
-	/*
+	/**
 	 * Parameterized constructor. Constructs a list with the given capacity.
+	 * @param initialCapacity
+	 * @throws IllegalArgumentException
 	 */
-	public ArrayList(int initialCapacity) throws Exception {
+	public ArrayList(int initialCapacity) throws IllegalArgumentException {
 		if (initialCapacity < 0)
-			throw new Exception("Illegal initial capacity");
+			throw new IllegalArgumentException("Illegal initial capacity");
 		else {
 			this.capacity = initialCapacity;
 			internalArray = new Object[this.capacity];
